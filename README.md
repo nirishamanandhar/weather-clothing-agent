@@ -1,7 +1,7 @@
 # 🧥 Weather Clothing Agent
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-nirishamanandhar%2Fweather--clothing--agent-blue.svg?logo=data:image/png;base64,...)](https://deepwiki.com/nirishamanandhar/weather-clothing-agent)
 
 > An end-to-end agentic AI practice project — from a simple weather tool to a fully deployed production-style system.
-> 📖 [View full docs on DeepWiki](https://deepwiki.com/nirishamanandhar/weather-clothing-agent/1-overview)
 
 ## Overview
 
