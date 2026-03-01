@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from pydantic import BaseModel
 from agent.agent import agent
 from fastapi.middleware.cors import CORSMiddleware
+from .auth import verify_backend_token
 
 app = FastAPI(title="Weather Clothing Agent API")
 
@@ -18,7 +19,7 @@ class Query(BaseModel):
     message: str
 
 
-@app.post("/recommend")
+@app.post("/recommend", dependencies=[Depends(verify_backend_token)])
 async def recommend(query: Query):
     try:
         result = await agent.run(query.message)

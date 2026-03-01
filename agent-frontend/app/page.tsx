@@ -6,15 +6,17 @@ export default function Home() {
   const [response, setResponse] = useState("");
 
   async function ask() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/recommend`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
+    const res = await fetch("/api/recommend", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({message}),
     });
-
     const data = await res.json();
     setResponse(data.recommendation);
   }
+
 
   return (
     <div style={{ padding: 40, fontFamily: "sans-serif" }}>
