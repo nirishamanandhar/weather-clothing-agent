@@ -1,9 +1,1 @@
-{
-    "projects": [
-      {
-        "src": "agent-frontend/package.json",
-        "use": "@vercel/next"
-      }
-    ]
-  }
-  
+{ "rootDirectory": "agent-frontend" }
