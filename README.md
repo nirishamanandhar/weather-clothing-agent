@@ -1,6 +1,7 @@
 # 🧥 Weather Clothing Agent
 
 > An end-to-end agentic AI practice project — from a simple weather tool to a fully deployed production-style system.
+> 📖 [View full docs on DeepWiki](https://deepwiki.com/nirishamanandhar/weather-clothing-agent/1-overview)
 
 ## Overview
 
@@ -21,7 +22,7 @@ Over time, the project evolved into a complete end-to-end pipeline with a FastAP
 
 ## Architecture
 ```
-Frontend → server-side API route → backend → weather tool → agent → response
+![Architecture Diagram](assets/architecture.png)
 ```
 
 | Directory | Description |
