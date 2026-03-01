@@ -12,11 +12,13 @@ class Query(BaseModel):
 @app.post("/recommend")
 async def recommend(query: Query):
     try:
-        result = await agent.run(query.message)
-        return {
-            "success": True,
-            "recommendation": result.output()
-            }
+        import os 
+        print("ENV:", os.environ)
+        # result = await agent.run(query.message)
+        # return {
+        #     "success": True,
+        #     "recommendation": result.output()
+        #     }
     except Exception as e:
         return {
             "success": False,
