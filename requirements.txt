@@ -2,8 +2,7 @@ fastapi==0.110.0
 uvicorn[standard]==0.29.0
 
 pydantic==2.6.4
-pydantic-ai @ https://files.pythonhosted.org/packages/7f/4e/5c0d0c4e1c9f/pydantic_ai-0.0.22-py3-none-any.whl
-
+pydantic-ai @ https://files.pythonhosted.org/packages/8c/0e/8e0e3f7c3c8f/pydantic_ai-0.0.22-py3-none-any.whl
 
 openai==1.14.0
 
