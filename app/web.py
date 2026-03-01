@@ -14,12 +14,14 @@ async def recommend(query: Query):
     try:
         import os 
         print("ENV:", os.environ)
-        # result = await agent.run(query.message)
-        # return {
-        #     "success": True,
-        #     "recommendation": result.output()
-        #     }
+        result = await agent.run(query.message)
+        return {
+            "success": True,
+            "recommendation": result.output()
+            }
     except Exception as e:
+        import traceback 
+        traceback.print_exc()
         return {
             "success": False,
             "error": str(e)
