@@ -1,8 +1,17 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from agent.agent import agent
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Weather Clothing Agent API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or restrict to your Vercel domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class Query(BaseModel):
